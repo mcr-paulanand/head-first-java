@@ -1,5 +1,3 @@
-package ch5;
-
 class SimpleStartupGame {
   public static void main(String[] args) {
     int numOfGuesses = 0;
