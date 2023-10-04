@@ -28,8 +28,8 @@ class Terminal {
 }
 
 class Computer {
-    final static String IPV4_REGEX_PATTERN = "^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$";
-    final static String SERIAL_NUMBER_REGEX_PATTERN = "^[A-Za-z0-9]{10}$";
+    final private static String IPV4_REGEX_PATTERN = "^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$";
+    final private static String SERIAL_NUMBER_REGEX_PATTERN = "^[A-Za-z0-9]{10}$";
 
     private String ipAddress;
     private String serialNumber;
