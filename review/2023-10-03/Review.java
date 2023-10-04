@@ -4,6 +4,11 @@ class Review {
         System.out.println(t1.ipAddress + " " + t1.serialNumber);
         Terminal t2 = new Terminal("2.2.2.2", "0987654321");
         System.out.println(t2.ipAddress + " " + t2.serialNumber);
+        Terminal t3 = new Terminal("2.2.2.2", "0987654321");
+        System.out.println(t3.ipAddress + " " + t3.serialNumber);
+        System.out.println("Is t2 and t3 equals: " + t2.equals(t3));
+        System.out.println("t2 hashcode: " + t2.hashCode());
+        System.out.println("t3 hashcode: " + t3.hashCode());
 
         Computer c1 = new Computer();
         c1.setIpAddress("5.5.5.5");
@@ -17,13 +22,13 @@ class Terminal {
     String serialNumber;
 
     Terminal() {
-        ipAddress = "1.1.1.1";
-        serialNumber = "1234567890";
+        this.ipAddress = ipAddress;
+        this.serialNumber = serialNumber;
     }
 
-    Terminal(String userIp, String userSerial) {
-        ipAddress = userIp;
-        serialNumber = userSerial;
+    Terminal(String ipAddress, String serialNumber) {
+        this.ipAddress = ipAddress;
+        this.serialNumber = serialNumber;
     }
 }
 
