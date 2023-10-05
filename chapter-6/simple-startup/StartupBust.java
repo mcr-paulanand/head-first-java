@@ -1,3 +1,4 @@
+package ch6;
 
 import java.util.ArrayList;
 
