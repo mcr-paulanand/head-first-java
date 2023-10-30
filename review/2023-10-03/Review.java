@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 class Review {
     public static void main(String[] args) {
         System.out.println("TERMINAL\n========");
@@ -53,7 +55,7 @@ class Terminal {
 
         if (!(otherObject instanceof Terminal t)) return false;
 
-        return this.serialNumber.equals(t.serialNumber) && this.ipAddress.equals(t.ipAddress);
+        return Objects.equals(ipAddress, t.ipAddress) && Objects.equals(serialNumber, t.serialNumber);
     }
 }
 
@@ -72,7 +74,7 @@ class Computer {
 
         if (!(otherObject instanceof Computer c)) return false;
 
-        return this.serialNumber.equals(c.serialNumber) && this.ipAddress.equals(c.ipAddress);
+        return Objects.equals(ipAddress, c.ipAddress) && Objects.equals(serialNumber, c.serialNumber);
     }
 
     String getIpAddress() {
