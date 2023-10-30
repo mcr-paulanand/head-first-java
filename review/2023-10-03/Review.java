@@ -57,6 +57,11 @@ class Terminal {
 
         return Objects.equals(ipAddress, t.ipAddress) && Objects.equals(serialNumber, t.serialNumber);
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ipAddress, serialNumber);
+    }
 }
 
 class Computer {
@@ -75,6 +80,11 @@ class Computer {
         if (!(otherObject instanceof Computer c)) return false;
 
         return Objects.equals(ipAddress, c.ipAddress) && Objects.equals(serialNumber, c.serialNumber);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ipAddress, serialNumber);
     }
 
     String getIpAddress() {
