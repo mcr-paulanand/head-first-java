@@ -46,10 +46,12 @@ class Terminal {
     }
 
     @Override
-    public boolean equals(Object object) {
-        if (object == this) return true;
+    public boolean equals(Object otherObject) {
+        if (otherObject == this) return true;
 
-        if (!(object instanceof Terminal t)) return false;
+        if (otherObject == null) return false;
+
+        if (!(otherObject instanceof Terminal t)) return false;
 
         return this.serialNumber.equals(t.serialNumber) && this.ipAddress.equals(t.ipAddress);
     }
@@ -63,10 +65,12 @@ class Computer {
     private String serialNumber;
 
     @Override
-    public boolean equals(Object object) {
-        if (object == this) return true;
+    public boolean equals(Object otherObject) {
+        if (otherObject == this) return true;
 
-        if (!(object instanceof Computer c)) return false;
+        if (otherObject == null) return false;
+
+        if (!(otherObject instanceof Computer c)) return false;
 
         return this.serialNumber.equals(c.serialNumber) && this.ipAddress.equals(c.ipAddress);
     }
