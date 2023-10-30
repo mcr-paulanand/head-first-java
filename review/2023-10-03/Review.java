@@ -44,6 +44,15 @@ class Terminal {
         this.ipAddress = ipAddress;
         this.serialNumber = serialNumber;
     }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object == this) return true;
+
+        if (!(object instanceof Terminal t)) return false;
+
+        return this.serialNumber.equals(t.serialNumber) && this.ipAddress.equals(t.ipAddress);
+    }
 }
 
 class Computer {
@@ -52,6 +61,15 @@ class Computer {
 
     private String ipAddress;
     private String serialNumber;
+
+    @Override
+    public boolean equals(Object object) {
+        if (object == this) return true;
+
+        if (!(object instanceof Computer c)) return false;
+
+        return this.serialNumber.equals(c.serialNumber) && this.ipAddress.equals(c.ipAddress);
+    }
 
     String getIpAddress() {
         return this.ipAddress;
